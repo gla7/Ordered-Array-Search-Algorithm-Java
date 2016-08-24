@@ -21,6 +21,8 @@ public class DataStructures4 {// SEARCHING IN AN ORDERED ARRAY
 	}
 	
 	// the time complexity of this array will be better than standard search, as it will discard many operations, making it especially useful for large arrays- we are reducing the array by half on each step
+	// so on first search we will have a space of n elements, then on second n/2, then n/4, and so on, until the ith search where we'll have n/2^(i-1)
+	// the worst case scenario is that we have one element left on the last search, so that n/2^(i-1) = 1 => i = log_2(n)+1, so we'll have about (log_2(n)+1)*3 + 3 operations, so will be O(log_2(n)), much faster than O(n)!
 	
 	public static void main(String[] args) {
 		System.out.println("DEMONSTRATING ORDERED ARRAY SEARCH:");
